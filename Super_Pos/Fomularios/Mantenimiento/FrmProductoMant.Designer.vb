@@ -27,8 +27,8 @@ Partial Class FrmProductoMant
         Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.dgvproducto = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbtipoisv = New System.Windows.Forms.ComboBox()
+        Me.cmbdpto = New System.Windows.Forms.ComboBox()
         Me.txtvalorisv = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtutilidad = New System.Windows.Forms.TextBox()
@@ -97,8 +97,8 @@ Partial Class FrmProductoMant
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.cmbtipoisv)
+        Me.GroupBox1.Controls.Add(Me.cmbdpto)
         Me.GroupBox1.Controls.Add(Me.txtvalorisv)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.txtutilidad)
@@ -128,21 +128,21 @@ Partial Class FrmProductoMant
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del Producto"
         '
-        'ComboBox2
+        'cmbtipoisv
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(541, 18)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox2.TabIndex = 23
+        Me.cmbtipoisv.FormattingEnabled = True
+        Me.cmbtipoisv.Location = New System.Drawing.Point(541, 18)
+        Me.cmbtipoisv.Name = "cmbtipoisv"
+        Me.cmbtipoisv.Size = New System.Drawing.Size(137, 21)
+        Me.cmbtipoisv.TabIndex = 23
         '
-        'ComboBox1
+        'cmbdpto
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(313, 75)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(137, 21)
-        Me.ComboBox1.TabIndex = 22
+        Me.cmbdpto.FormattingEnabled = True
+        Me.cmbdpto.Location = New System.Drawing.Point(313, 75)
+        Me.cmbdpto.Name = "cmbdpto"
+        Me.cmbdpto.Size = New System.Drawing.Size(137, 21)
+        Me.cmbdpto.TabIndex = 22
         '
         'txtvalorisv
         '
@@ -445,6 +445,6 @@ Partial Class FrmProductoMant
     Public WithEvents Label12 As Label
     Public WithEvents txtproveedor As TextBox
     Public WithEvents Label11 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbtipoisv As ComboBox
+    Friend WithEvents cmbdpto As ComboBox
 End Class
