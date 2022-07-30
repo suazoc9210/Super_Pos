@@ -27,12 +27,22 @@ Partial Class FrmProductoMant
         Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.dgvproducto = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtvalorisv = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtutilidad = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtventa = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtcostobruto = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtproveedor = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtcostoneto = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dtfechavence = New System.Windows.Forms.DateTimePicker()
-        Me.txtdepartamento = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txttipisv = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ckestado = New System.Windows.Forms.CheckBox()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
@@ -42,16 +52,6 @@ Partial Class FrmProductoMant
         Me.txtcodproducto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtproveedor = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtcostobruto = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtutilidad = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtventa = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtvalorisv = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.btnsalir = New System.Windows.Forms.Button()
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.btnactualizar = New System.Windows.Forms.Button()
@@ -88,6 +88,7 @@ Partial Class FrmProductoMant
         '
         'dgvproducto
         '
+        Me.dgvproducto.AllowUserToAddRows = False
         Me.dgvproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvproducto.Location = New System.Drawing.Point(12, 297)
         Me.dgvproducto.Name = "dgvproducto"
@@ -96,6 +97,8 @@ Partial Class FrmProductoMant
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.txtvalorisv)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.txtutilidad)
@@ -109,9 +112,7 @@ Partial Class FrmProductoMant
         Me.GroupBox1.Controls.Add(Me.txtcostoneto)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.dtfechavence)
-        Me.GroupBox1.Controls.Add(Me.txtdepartamento)
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.txttipisv)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.ckestado)
         Me.GroupBox1.Controls.Add(Me.txtdescripcion)
@@ -126,6 +127,102 @@ Partial Class FrmProductoMant
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del Producto"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(541, 18)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(137, 21)
+        Me.ComboBox2.TabIndex = 23
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(313, 75)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(137, 21)
+        Me.ComboBox1.TabIndex = 22
+        '
+        'txtvalorisv
+        '
+        Me.txtvalorisv.Location = New System.Drawing.Point(771, 19)
+        Me.txtvalorisv.Name = "txtvalorisv"
+        Me.txtvalorisv.Size = New System.Drawing.Size(137, 20)
+        Me.txtvalorisv.TabIndex = 11
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(705, 22)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(54, 13)
+        Me.Label15.TabIndex = 10
+        Me.Label15.Text = "Valor ISV:"
+        '
+        'txtutilidad
+        '
+        Me.txtutilidad.Location = New System.Drawing.Point(771, 72)
+        Me.txtutilidad.Name = "txtutilidad"
+        Me.txtutilidad.Size = New System.Drawing.Size(137, 20)
+        Me.txtutilidad.TabIndex = 19
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(705, 75)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.TabIndex = 18
+        Me.Label13.Text = "Utilidad:"
+        '
+        'txtventa
+        '
+        Me.txtventa.Location = New System.Drawing.Point(541, 72)
+        Me.txtventa.Name = "txtventa"
+        Me.txtventa.Size = New System.Drawing.Size(137, 20)
+        Me.txtventa.TabIndex = 17
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(465, 75)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(70, 13)
+        Me.Label14.TabIndex = 16
+        Me.Label14.Text = "Precio venta:"
+        '
+        'txtcostobruto
+        '
+        Me.txtcostobruto.Location = New System.Drawing.Point(771, 46)
+        Me.txtcostobruto.Name = "txtcostobruto"
+        Me.txtcostobruto.Size = New System.Drawing.Size(137, 20)
+        Me.txtcostobruto.TabIndex = 15
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(705, 49)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(60, 13)
+        Me.Label12.TabIndex = 14
+        Me.Label12.Text = "Costo total:"
+        '
+        'txtproveedor
+        '
+        Me.txtproveedor.Location = New System.Drawing.Point(115, 102)
+        Me.txtproveedor.Name = "txtproveedor"
+        Me.txtproveedor.Size = New System.Drawing.Size(335, 20)
+        Me.txtproveedor.TabIndex = 7
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 105)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(59, 13)
+        Me.Label11.TabIndex = 6
+        Me.Label11.Text = "Proveedor:"
         '
         'txtcostoneto
         '
@@ -152,13 +249,6 @@ Partial Class FrmProductoMant
         Me.dtfechavence.TabIndex = 5
         Me.dtfechavence.UseWaitCursor = True
         '
-        'txtdepartamento
-        '
-        Me.txtdepartamento.Location = New System.Drawing.Point(313, 76)
-        Me.txtdepartamento.Name = "txtdepartamento"
-        Me.txtdepartamento.Size = New System.Drawing.Size(137, 20)
-        Me.txtdepartamento.TabIndex = 7
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -167,13 +257,6 @@ Partial Class FrmProductoMant
         Me.Label10.Size = New System.Drawing.Size(77, 13)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Departamento:"
-        '
-        'txttipisv
-        '
-        Me.txttipisv.Location = New System.Drawing.Point(541, 20)
-        Me.txttipisv.Name = "txttipisv"
-        Me.txttipisv.Size = New System.Drawing.Size(137, 20)
-        Me.txttipisv.TabIndex = 9
         '
         'Label7
         '
@@ -253,86 +336,6 @@ Partial Class FrmProductoMant
         Me.Label1.Size = New System.Drawing.Size(312, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mantenimiento de Productos"
-        '
-        'txtproveedor
-        '
-        Me.txtproveedor.Location = New System.Drawing.Point(115, 102)
-        Me.txtproveedor.Name = "txtproveedor"
-        Me.txtproveedor.Size = New System.Drawing.Size(335, 20)
-        Me.txtproveedor.TabIndex = 7
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 105)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(59, 13)
-        Me.Label11.TabIndex = 6
-        Me.Label11.Text = "Proveedor:"
-        '
-        'txtcostobruto
-        '
-        Me.txtcostobruto.Location = New System.Drawing.Point(771, 46)
-        Me.txtcostobruto.Name = "txtcostobruto"
-        Me.txtcostobruto.Size = New System.Drawing.Size(137, 20)
-        Me.txtcostobruto.TabIndex = 15
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(705, 49)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(60, 13)
-        Me.Label12.TabIndex = 14
-        Me.Label12.Text = "Costo total:"
-        '
-        'txtutilidad
-        '
-        Me.txtutilidad.Location = New System.Drawing.Point(771, 72)
-        Me.txtutilidad.Name = "txtutilidad"
-        Me.txtutilidad.Size = New System.Drawing.Size(137, 20)
-        Me.txtutilidad.TabIndex = 19
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(705, 75)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(45, 13)
-        Me.Label13.TabIndex = 18
-        Me.Label13.Text = "Utilidad:"
-        '
-        'txtventa
-        '
-        Me.txtventa.Location = New System.Drawing.Point(541, 72)
-        Me.txtventa.Name = "txtventa"
-        Me.txtventa.Size = New System.Drawing.Size(137, 20)
-        Me.txtventa.TabIndex = 17
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(465, 75)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(70, 13)
-        Me.Label14.TabIndex = 16
-        Me.Label14.Text = "Precio venta:"
-        '
-        'txtvalorisv
-        '
-        Me.txtvalorisv.Location = New System.Drawing.Point(771, 19)
-        Me.txtvalorisv.Name = "txtvalorisv"
-        Me.txtvalorisv.Size = New System.Drawing.Size(137, 20)
-        Me.txtvalorisv.TabIndex = 11
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(705, 22)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(54, 13)
-        Me.Label15.TabIndex = 10
-        Me.Label15.Text = "Valor ISV:"
         '
         'btnsalir
         '
@@ -419,9 +422,7 @@ Partial Class FrmProductoMant
     Public WithEvents btnactualizar As Button
     Public WithEvents btnguardar As Button
     Public WithEvents GroupBox1 As GroupBox
-    Public WithEvents txtdepartamento As TextBox
     Public WithEvents Label10 As Label
-    Public WithEvents txttipisv As TextBox
     Public WithEvents Label7 As Label
     Public WithEvents ckestado As CheckBox
     Public WithEvents txtdescripcion As TextBox
@@ -444,4 +445,6 @@ Partial Class FrmProductoMant
     Public WithEvents Label12 As Label
     Public WithEvents txtproveedor As TextBox
     Public WithEvents Label11 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
